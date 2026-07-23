@@ -1,0 +1,410 @@
+{
+  "info": {
+    "_postman_id": "b8df12f8-d917-44ba-8746-bac066c03f21",
+    "name": "Employee Management API",
+    "description": "- **Employee Management API**",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49486143",
+    "_collection_link": "https://go.postman.co/collection/49486143-b8df12f8-d917-44ba-8746-bac066c03f21?source=collection_link"
+  },
+  "item": [
+    {
+      "name": " http://localhost:5001/api/employees",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNjBlYTlkNTlmZDMzZGIyOWU0Yzc0MCIsImlhdCI6MTc4NDczNjQ0MywiZXhwIjoxNzg1MzQxMjQzfQ.Tl4RGGaZzmHD-aeMoX0112fHReIDqxDEMiN5uSvPNow",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text",
+            "id": 0
+          },
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNjBlYTlkNTlmZDMzZGIyOWU0Yzc0MCIsImlhdCI6MTc4NDczNjQ0MywiZXhwIjoxNzg1MzQxMjQzfQ.Tl4RGGaZzmHD-aeMoX0112fHReIDqxDEMiN5uSvPNow",
+            "type": "text",
+            "id": 1
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Demo Employee\",\n  \"email\": \"demoemployee123@example.com\",\n  \"phone\": \"9876543210\",\n  \"department\": \"Engineering\",\n  \"designation\": \"Backend Developer\",\n  \"salary\": 60000,\n  \"joiningDate\": \"2024-01-15\",\n  \"status\": \"Active\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/employees",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "employees"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": " http://localhost:5001/api/auth/login",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNjBjNzZiY2NlZWUzZDRkNzFmZTZjOCIsImlhdCI6MTc4NDcyNzUzMCwiZXhwIjoxNzg1MzMyMzMwfQ.u3WzeHj5hKwu9rEzES4UJ7yGbmarrNYq7GSN8U6UNBo",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text",
+            "id": 0
+          },
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNjBjNzZiY2NlZWUzZDRkNzFmZTZjOCIsImlhdCI6MTc4NDcyNzUzMCwiZXhwIjoxNzg1MzMyMzMwfQ.u3WzeHj5hKwu9rEzES4UJ7yGbmarrNYq7GSN8U6UNBo",
+            "type": "text",
+            "id": 1
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"testuser123@example.com\",\n  \"password\": \"Password1\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": " http://localhost:5001/api/auth/register",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNjBjNzZiY2NlZWUzZDRkNzFmZTZjOCIsImlhdCI6MTc4NDcyNzUzMCwiZXhwIjoxNzg1MzMyMzMwfQ.u3WzeHj5hKwu9rEzES4UJ7yGbmarrNYq7GSN8U6UNBo",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text",
+            "id": 0
+          },
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNjBjNzZiY2NlZWUzZDRkNzFmZTZjOCIsImlhdCI6MTc4NDcyNzUzMCwiZXhwIjoxNzg1MzMyMzMwfQ.u3WzeHj5hKwu9rEzES4UJ7yGbmarrNYq7GSN8U6UNBo",
+            "type": "text",
+            "id": 1
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Test User\",\n  \"email\": \"testuser123@example.com\",\n  \"password\": \"Password1\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5001/api/employees?page=1&limit=2",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNjBjNzZiY2NlZWUzZDRkNzFmZTZjOCIsImlhdCI6MTc4NDcyNzUzMCwiZXhwIjoxNzg1MzMyMzMwfQ.u3WzeHj5hKwu9rEzES4UJ7yGbmarrNYq7GSN8U6UNBo",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text",
+            "id": 0
+          },
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNjBjNzZiY2NlZWUzZDRkNzFmZTZjOCIsImlhdCI6MTc4NDcyNzUzMCwiZXhwIjoxNzg1MzMyMzMwfQ.u3WzeHj5hKwu9rEzES4UJ7yGbmarrNYq7GSN8U6UNBo",
+            "type": "text",
+            "id": 1
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/employees?page=1&limit=2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "employees"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1",
+              "sortOrder": 0
+            },
+            {
+              "key": "limit",
+              "value": "2",
+              "sortOrder": 1
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5001/api/employees?sortBy=salary&order=desc",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNjBjNzZiY2NlZWUzZDRkNzFmZTZjOCIsImlhdCI6MTc4NDcyNzUzMCwiZXhwIjoxNzg1MzMyMzMwfQ.u3WzeHj5hKwu9rEzES4UJ7yGbmarrNYq7GSN8U6UNBo",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text",
+            "id": 0
+          },
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNjBjNzZiY2NlZWUzZDRkNzFmZTZjOCIsImlhdCI6MTc4NDcyNzUzMCwiZXhwIjoxNzg1MzMyMzMwfQ.u3WzeHj5hKwu9rEzES4UJ7yGbmarrNYq7GSN8U6UNBo",
+            "type": "text",
+            "id": 1
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/employees?sortBy=salary&order=desc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "employees"
+          ],
+          "query": [
+            {
+              "key": "sortBy",
+              "value": "salary",
+              "sortOrder": 0
+            },
+            {
+              "key": "order",
+              "value": "desc",
+              "sortOrder": 1
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5001/api/employees/6a60d37eaded7a020d0f582b",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNjBjNzZiY2NlZWUzZDRkNzFmZTZjOCIsImlhdCI6MTc4NDcyNzUzMCwiZXhwIjoxNzg1MzMyMzMwfQ.u3WzeHj5hKwu9rEzES4UJ7yGbmarrNYq7GSN8U6UNBo",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text",
+            "id": 0
+          },
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNjBjNzZiY2NlZWUzZDRkNzFmZTZjOCIsImlhdCI6MTc4NDcyNzUzMCwiZXhwIjoxNzg1MzMyMzMwfQ.u3WzeHj5hKwu9rEzES4UJ7yGbmarrNYq7GSN8U6UNBo",
+            "type": "text",
+            "id": 1
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/employees/6a60d37eaded7a020d0f582b",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "employees",
+            "6a60d37eaded7a020d0f582b"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5001/api/employees/6a60d37eaded7a020d0f582b",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNjBjNzZiY2NlZWUzZDRkNzFmZTZjOCIsImlhdCI6MTc4NDcyNzUzMCwiZXhwIjoxNzg1MzMyMzMwfQ.u3WzeHj5hKwu9rEzES4UJ7yGbmarrNYq7GSN8U6UNBo",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text",
+            "id": 0
+          },
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNjBjNzZiY2NlZWUzZDRkNzFmZTZjOCIsImlhdCI6MTc4NDcyNzUzMCwiZXhwIjoxNzg1MzMyMzMwfQ.u3WzeHj5hKwu9rEzES4UJ7yGbmarrNYq7GSN8U6UNBo",
+            "type": "text",
+            "id": 1
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Priya Sharma\",\n  \"email\": \"priya999999999@company.com\",\n  \"phone\": \"9876543210\",\n  \"department\": \"Engineering\",\n  \"designation\": \"Senior Software Engineer\",\n  \"salary\": 90000,\n  \"joiningDate\": \"2024-01-15\",\n  \"status\": \"Active\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/employees/6a60d37eaded7a020d0f582b",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "employees",
+            "6a60d37eaded7a020d0f582b"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
